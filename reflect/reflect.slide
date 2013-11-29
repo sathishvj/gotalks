@@ -1,6 +1,6 @@
 reflection in Go
-Using the _reflect_ package
-14 Dec 2013
+Using the reflect package
+#14 Dec 2013
 Tags: golang, go, reflect 
 
 Sathish VJ
@@ -8,6 +8,40 @@ sathishvj@gmail.com
 http://sathishvj.com
 @sathishvj
 
-* What is Reflection
+*What is Reflection
 
-A way to see yourself.
+abcd
+
+* My Code Sample
+
+.play typeassertion.go /START TYPE OMIT/,/END TYPE OMIT/
+.code typeassertion.go /beginning of main OMIT/,/2 lines into main/ 
+.code typeassertion.go /type/,/}/
+
+* Images
+
+.image http://farm4.staticflickr.com/3327/3249988445_76b4972a11.jpg
+
+* Interfaces and Types
+abcd
+
+* The empty interface{}
+- All types 'implement' the empty interface
+- Therefore any type can be cast to interface{}
+- Like Object in Java, void* in C++
+
+* Type Assertions
+
+* Type, Value, Kind
+
+* Notes
+
+** Sub section
+What is this?
+
+** Sub section 2
+What is this?
+
+- Rob’s implementation of sort: [[http://play.golang.org/p/A6TqPhC9Zp]]
+
+

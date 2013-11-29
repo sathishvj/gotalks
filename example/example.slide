@@ -1,0 +1,36 @@
+Example to show present tool
+Using go.talks/present to create a presentation
+15 Dec 2013
+
+Sathish VJ
+sathishvj@gmail.com
+http://sathishvj.com
+@sathishvj
+
+* Formatting
+
+Let's *bold* some text.
+Let's _italicize_ some text.
+
+* Images
+
+.image http://farm4.staticflickr.com/3327/3249988445_76b4972a11.jpg
+
+* Showing Code
+
+.code hello.go
+
+* Showing Partial Code
+
+.code hello.go /show A type/,/end show A type/
+.code hello.go /start main OMIT/,/end main OMIT/
+.code hello.go /^func printStr/,/}/
+.code hello.go /^func printStr/,/}/ HL12
+
+* Running code
+
+.play hello.go /start main OMIT/,/end main OMIT/
+
+* Bullet Points
+- bullet point 1
+- a second bullet point 
