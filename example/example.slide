@@ -27,6 +27,8 @@ Let's _italicize_ some text.
 .code hello.go /^func printStr/,/}/
 .code hello.go /^func printStr/,/}/ HL12
 
+** Subsection 1
+
 * Running code
 
 .play hello.go /start main OMIT/,/end main OMIT/

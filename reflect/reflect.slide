@@ -8,40 +8,66 @@ sathishvj@gmail.com
 http://sathishvj.com
 @sathishvj
 
-*What is Reflection
+* What is Reflection
 
-abcd
+- Ability of a program to inspect itself via its types.
+- Type introspection can reveal not only data and functions but also type of data and signature of functions.
+- Metadata: information about data (data here being the program code)
+- Inspect type capabilities, then read/modify them.
+- Observe and change runtime instances.
 
-* My Code Sample
+* History of Reflection
 
-.play typeassertion.go /START TYPE OMIT/,/END TYPE OMIT/
-.code typeassertion.go /beginning of main OMIT/,/2 lines into main/ 
-.code typeassertion.go /type/,/}/
+- Assembly programs had inherent ability to modify itself
+- Later high-level languages removed it; code security being a concern
+- "Brian Cantwell Smith's 1982 doctoral dissertation introduced the notion of computational reflection in programming languages, and the notion of the meta-circular interpreter as a component of 3-Lisp."
 
-* Images
+* Advantages of Reflection
 
-.image http://farm4.staticflickr.com/3327/3249988445_76b4972a11.jpg
+- Ability to deal with types unknown at compile time.
+- Ability to obtain instances from 'base' class instances.
+- Ability to make runtime decisions on code that is unknowable at compile time.
+- Construct instances/arrays of new types.
 
-* Interfaces and Types
-abcd
+* Metadata
 
-* The empty interface{}
-- All types 'implement' the empty interface
-- Therefore any type can be cast to interface{}
+- Assume struct Person { Name string }
+- Typically we use person.Name to access data
+- But runtime also has information about the type of Name, all the fields in Person, etc.
+- Not _obj.Id_ = _5_, but _obj.Field("Id").Set(5)_
+
+* Interfaces and Types in Go
+
+.play interfaces.go /START INTERFACES OMIT/,/END INTERFACES OMIT/ 
+- A type implements an interface if it implements all methods in it, i.e. has all the behavior defined in the interface.
+- This is automatic and need not be explicitly declared.
+- An interface will accept all types that implement its methods.
+
+* The empty interface {}
+
+- The empty interface has no methods.
+- Therefore, all types implement the empty interface.
+- Any type can be assigned to the empty interface.
+
+.code emptyinterface.go /start OMIT/,/end OMIT/
+
 - Like Object in Java, void* in C++
 
 * Type Assertions
 
+- To get back an instance from an empty interface, use type assertions.
+
+.code typeassertion.go /start OMIT/,/end OMIT/
+
 * Type, Value, Kind
+
+* 3 Laws of Reflection
 
 * Notes
 
-** Sub section
-What is this?
-
-** Sub section 2
-What is this?
-
+- Laws of reflection [[http://blog.golang.org/laws-of-reflection]]
+- Russ Cox on Interfaces in Go [[http://research.swtch.com/interfaces]]
+- Reflect package [[http://golang.org/pkg/reflect]]
 - Rob’s implementation of sort: [[http://play.golang.org/p/A6TqPhC9Zp]]
 
 
